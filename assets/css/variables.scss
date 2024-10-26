@@ -1,0 +1,29 @@
+$ff: 'Lato', sans-serif;
+$lh: 1.1428;
+$wh: #ffffff;
+$wh-p: #FAFCFF;
+$bl: #0B2136;
+$gray: #697582;
+$lgray: rgb(214, 216, 231);
+$blue: #114FD3;
+$dblue: #0625C4;
+$lblue: rgb(228, 236, 253);
+$red: #EE2F53;
+$dred: #DC0C33;
+$pink: #FBD1D9;
+$green: #50B66E;
+
+@mixin text {
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: $lh;
+}
+
+@mixin description {
+	font-family: $ff;
+	font-size: 12.33px;
+	font-weight: 400;
+	color: $gray;
+	line-height: 1.3;
+}

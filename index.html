@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>АСД-Кадры</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="user-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M12 12.6667C12 11.1939 10.2091 10 8 10C5.79086 10 4 11.1939 4 12.6667M8 8.00002C6.52724 8.00002 5.33333 6.80611 5.33333 5.33335C5.33333 3.86059 6.52724 2.66669 8 2.66669C9.47276 2.66669 10.6667 3.86059 10.6667 5.33335C10.6667 6.80611 9.47276 8.00002 8 8.00002Z" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="plan-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M4.83913 4.42271V8.11356M4.83913 4.42271C5.4977 4.42271 6.03156 3.88037 6.03156 3.21136C6.03156 2.54234 5.4977 2 4.83913 2C4.18057 2 3.64671 2.54234 3.64671 3.21136C3.64671 3.88037 4.18057 4.42271 4.83913 4.42271ZM9.0221 12.7886H5.63409C5.19505 12.7886 4.83913 12.4327 4.83913 11.9937V8.11356M9.0221 12.7886C9.0221 13.4577 9.55597 14 10.2145 14C10.8731 14 11.407 13.4577 11.407 12.7886C11.407 12.1196 10.8731 11.5773 10.2145 11.5773C9.55597 11.5773 9.0221 12.1196 9.0221 12.7886ZM4.83913 8.11356H9.0221M9.0221 8.11356C9.0221 8.78258 9.55597 9.32492 10.2145 9.32492C10.8731 9.32492 11.407 8.78258 11.407 8.11356C11.407 7.44455 10.8731 6.90221 10.2145 6.90221C9.55597 6.90221 9.0221 7.44455 9.0221 8.11356Z" stroke-width="1.2"/>
+			</g>
+		</symbol>
+		<symbol id="users-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M10.5833 13.3333V14.0833H12.0833V13.3333H10.5833ZM3.91667 13.3333V14.0833H5.41667V13.3333H3.91667ZM13.25 11.3336V12.0836H14.75V11.3336H13.25ZM12.1902 8.77449C11.7895 8.66946 11.3796 8.90912 11.2745 9.30979C11.1695 9.71047 11.4091 10.1204 11.8098 10.2255L12.1902 8.77449ZM1.25 11.3336V12.0836H2.75V11.3336H1.25ZM4.19019 10.2255C4.59086 10.1204 4.83052 9.71047 4.72549 9.30979C4.62045 8.90912 4.21049 8.66946 3.80981 8.77449L4.19019 10.2255ZM11.4998 6.2652C11.1912 6.54144 11.1649 7.01559 11.4411 7.32424C11.7174 7.63288 12.1915 7.65915 12.5002 7.3829L11.4998 6.2652ZM8.83315 3.28372C8.5245 3.55997 8.49824 4.03412 8.77448 4.34276C9.05073 4.65141 9.52487 4.67767 9.83352 4.40143L8.83315 3.28372ZM3.49981 7.3829C3.80846 7.65915 4.28261 7.63288 4.55885 7.32424C4.8351 7.01559 4.80883 6.54144 4.50019 6.2652L3.49981 7.3829ZM6.16648 4.40143C6.47513 4.67767 6.94927 4.65141 7.22552 4.34276C7.50176 4.03412 7.4755 3.55997 7.16685 3.28372L6.16648 4.40143ZM12.0833 13.3333C12.0833 12.4141 11.4663 11.71 10.7429 11.276C10.0046 10.833 9.03303 10.5833 8 10.5833V12.0833C8.80791 12.0833 9.50303 12.2813 9.97115 12.5622C10.4542 12.852 10.5833 13.148 10.5833 13.3333H12.0833ZM8 10.5833C6.96697 10.5833 5.99541 10.833 5.25711 11.276C4.53373 11.71 3.91667 12.4141 3.91667 13.3333H5.41667C5.41667 13.148 5.5458 12.852 6.02885 12.5622C6.49697 12.2813 7.19209 12.0833 8 12.0833V10.5833ZM14.75 11.3336C14.75 10.6545 14.4067 10.0843 13.943 9.66729C13.4813 9.25211 12.8654 8.95151 12.1902 8.77449L11.8098 10.2255C12.3118 10.3571 12.696 10.5632 12.94 10.7826C13.1819 11.0002 13.25 11.1925 13.25 11.3336H14.75ZM2.75 11.3336C2.75 11.1925 2.81806 11.0002 3.06002 10.7826C3.30403 10.5632 3.68816 10.3571 4.19019 10.2255L3.80981 8.77449C3.13457 8.95151 2.5187 9.25211 2.05702 9.66729C1.5933 10.0843 1.25 10.6545 1.25 11.3336H2.75ZM8 8.58331C7.30964 8.58331 6.75 8.02367 6.75 7.33331H5.25C5.25 8.8521 6.48122 10.0833 8 10.0833V8.58331ZM6.75 7.33331C6.75 6.64296 7.30964 6.08331 8 6.08331V4.58331C6.48122 4.58331 5.25 5.81453 5.25 7.33331H6.75ZM8 6.08331C8.69036 6.08331 9.25 6.64296 9.25 7.33331H10.75C10.75 5.81453 9.51878 4.58331 8 4.58331V6.08331ZM9.25 7.33331C9.25 8.02367 8.69036 8.58331 8 8.58331V10.0833C9.51878 10.0833 10.75 8.8521 10.75 7.33331H9.25ZM12.5002 7.3829C13.0616 6.88043 13.4167 6.14784 13.4167 5.33331H11.9167C11.9167 5.70345 11.7567 6.03524 11.4998 6.2652L12.5002 7.3829ZM13.4167 5.33331C13.4167 3.81453 12.1855 2.58331 10.6667 2.58331V4.08331C11.357 4.08331 11.9167 4.64296 11.9167 5.33331H13.4167ZM10.6667 2.58331C9.96282 2.58331 9.31918 2.84872 8.83315 3.28372L9.83352 4.40143C10.0552 4.20305 10.346 4.08331 10.6667 4.08331V2.58331ZM4.50019 6.2652C4.24326 6.03524 4.08333 5.70345 4.08333 5.33331H2.58333C2.58333 6.14784 2.93841 6.88043 3.49981 7.3829L4.50019 6.2652ZM4.08333 5.33331C4.08333 4.64296 4.64298 4.08331 5.33333 4.08331V2.58331C3.81455 2.58331 2.58333 3.81453 2.58333 5.33331H4.08333ZM5.33333 4.08331C5.65396 4.08331 5.94484 4.20305 6.16648 4.40143L7.16685 3.28372C6.68082 2.84872 6.03718 2.58331 5.33333 2.58331V4.08331Z"/>
+			</g>
+		</symbol>
+		<symbol id="exit-icon" viewBox="0 0 16 16">
+			<g clip-path="url(#clip0_17_683)">
+				<path d="M10 2.66666H4.33333C3.78105 2.66666 3.33333 3.11437 3.33333 3.66666V12.3333C3.33333 12.8856 3.78105 13.3333 4.33333 13.3333H10" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10.6667 10L12.6667 8M12.6667 8L10.6667 6M12.6667 8H6"  stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="search-icon" viewBox="0 0 16 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.46 7.00001C11.46 9.46409 9.46959 11.45 6.99992 11.45C4.53418 11.45 2.554 9.46801 2.554 7.00001C2.554 4.52924 4.53694 2.54003 6.99992 2.54003C9.46682 2.54003 11.46 4.53316 11.46 7.00001ZM10.5535 11.4021C9.58253 12.1833 8.3467 12.65 6.99992 12.65C3.87031 12.65 1.354 10.1296 1.354 7.00001C1.354 3.87039 3.87031 1.34003 6.99992 1.34003C10.1295 1.34003 12.66 3.87039 12.66 7.00001C12.66 8.34936 12.1896 9.58546 11.4036 10.5551L13.4243 12.5757C13.6587 12.81 13.6587 13.1899 13.4244 13.4242C13.1901 13.6586 12.8102 13.6586 12.5758 13.4243L10.5535 11.4021Z"/>
+			</g>
+		</symbol>
+		<symbol id="plus-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M11.7715 8H8.00025M8.00025 8H4.229M8.00025 8V4.22875M8.00025 8V11.7712" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__col">
+						<div class="header__burger burger">
+							<span class="burger__item"></span>
+						</div>
+						<h1 class="header__logo logo">
+							<a href="/" class="">
+								<span>АСД</span>-Кадры
+							</a>
+						</h1>
+					</div>
+					<div class="header__row">
+						<nav class="header__nav">
+							<a href="#" class="header__item active">
+								<svg>
+									<use xlink:href="#user-icon"></use>
+								</svg>
+								<span>Список сотрудников</span>
+							</a>
+							<a href="#" class="header__item">
+								<svg>
+									<use xlink:href="#plan-icon"></use>
+								</svg>
+								<span>Штатное расписание</span>
+							</a>
+							<a href="#" class="header__item header__item_f">
+								<svg>
+									<use xlink:href="#users-icon"></use>
+								</svg>
+								<span>Уведомления по разделам</span>
+							</a>
+						</nav>
+						<div class="header__account account">
+							<div class="account__icon">
+								<span>АС</span>
+							</div>
+							<div class="account__arrow">
+								<img src="assets/images/arrow-icon.svg" alt="">
+							</div>
+							<div class="account__dropdown">
+								<a href="#" class="account__dropdown-item">
+									<svg>
+										<use xlink:href="#exit-icon"></use>
+									</svg>
+									<span>Выйти</span>
+								</a>
+								<a href="#" class="account__dropdown-item">
+									<svg>
+										<use xlink:href="#exit-icon"></use>
+									</svg>
+									<span>Пункт 2</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header__menu menu">
+						<nav class="header__nav">
+							<a href="#" class="header__item active">
+								<svg>
+									<use xlink:href="#user-icon"></use>
+								</svg>
+								<span>Список сотрудников</span>
+							</a>
+							<a href="#" class="header__item">
+								<svg>
+									<use xlink:href="#plan-icon"></use>
+								</svg>
+								<span>Штатное расписание</span>
+							</a>
+							<a href="#" class="header__item header__item_f">
+								<svg>
+									<use xlink:href="#users-icon"></use>
+								</svg>
+								<span>Уведомления по разделам</span>
+							</a>
+						</nav>
+						<div class="menu__list">
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Организационная структура</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Отпуска</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Пенсия</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Аттестации</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Классные чины гражданской службы</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Награды и поощрения</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Справки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стат. отчеты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Руководители ИКСРФ</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Воинский учет (офицеры)</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Сотрудники</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Отпуска</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Пенсия</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Аттестации</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Классные чины гражданской службы</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Награды и поощрения</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Справки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стат. отчеты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Руководители ИКСРФ</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Воинский учет (офицеры)</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Отчеты</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Отпуска</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Пенсия</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Аттестации</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Классные чины гражданской службы</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Награды и поощрения</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Справки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стат. отчеты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Руководители ИКСРФ</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Воинский учет (офицеры)</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Сервис</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<a href="#" class="menu__item">
+								<span>Помощь</span>
+							</a><!--/menu__item-->
+						</div>
+					</div><!--/menu-->
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="tools">
+				<div class="container">
+					<div class="tools__inner">
+						<div class="tools__showbtn showbtn">
+							<span>Фильтр</span>
+							<img src="assets/images/arrow-icon.svg" alt="">
+						</div>
+						<div class="tools__col">
+							<form action="#" class="tools__search search">
+								<input type="text" placeholder="Поиск">
+								<button type="submit">
+									<svg>
+										<use xlink:href="#search-icon"></use>
+									</svg>
+								</button>
+							</form>
+							<a href="#" class="btn">
+								<svg>
+									<use xlink:href="#plus-icon"></use>
+								</svg>
+								<span>Добавить</span>
+							</a>
+							<div class="btn dropbtn">
+								<span>...</span>
+								<div class="dropbtn__dropdown">
+									<a href="#" class="dropbtn__item">
+										<span>Печать</span>
+									</a>
+									<a href="#" class="dropbtn__item">
+										<span>Группы</span>
+									</a>
+									<a href="#" class="dropbtn__item">
+										<span>Параметры назначения</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form action="#" class="tools__filters filters">
+						<div class="filters__inner">
+							<div class="filters__col">
+								<div class="filters__description">Список сотрудников</div>
+								<div class="filters__checkboxes">
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_1">
+										<label for="workers_1">П</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_2">
+										<label for="workers_2">Д</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_3">
+										<label for="workers_3">Ч</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_4">
+										<label for="workers_4">Ш</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_5">
+										<label for="workers_5">З</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_6">
+										<label for="workers_6">А</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_7">
+										<label for="workers_7">Б/У</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_8">
+										<label for="workers_8">В</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_9">
+										<label for="workers_9">Н</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input checked type="radio" name="workers" id="workers_10">
+										<label for="workers_10">Все</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_11">
+										<label for="workers_11">Руководство</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_12">
+										<label for="workers_12">К/Р</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_13">
+										<label for="workers_13">Кра</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_14">
+										<label for="workers_14">Кру</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_15">
+										<label for="workers_15">Крв</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_16">
+										<label for="workers_16">Крс</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_17">
+										<label for="workers_17">Ц</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_18">
+										<label for="workers_18">Гр</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_19">
+										<label for="workers_19">Кат</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_20">
+										<label for="workers_20">Подр.</label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input type="radio" name="workers" id="workers_21">
+										<label for="workers_21">Группы</label>
+									</div><!--/filters__checkbox-->
+								</div><!--/filters__checkboxes-->
+							</div>
+							<div class="filters__col">
+								<div class="filters__description">Пол</div>
+								<div class="filters__checkboxes">
+									<div class="filters__checkbox">
+										<input checked type="checkbox" name="gender" id="gender_male">
+										<label for="gender_male">Мужской <span>(173)</span></label>
+									</div><!--/filters__checkbox-->
+									<div class="filters__checkbox">
+										<input checked type="checkbox" name="gender" id="gender_female">
+										<label for="gender_female">Женский <span>(343)</span></label>
+									</div><!--/filters__checkbox-->
+								</div><!--/filters__checkboxes-->
+							</div>
+						</div>
+						<div class="filters__buttons">
+							<div class="filters__buttons-col">
+								<button type="reset" class="link link_red">Сбросить</button>
+								<button type="submit" class="link">Применить</button>
+							</div>
+							<a href="#" class="filters__hide link">Свернуть</a>
+						</div>
+					</form><!--/filters-->
+				</div>
+			</div><!--/tools-->
+			<div class="section">
+				<div class="container">
+					<div class="section__inner">
+						<div class="section__sidebar">
+							<div class="workers">
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">1</div>
+									<a href="#" class="workers__name">Агабабян Виктория Сергеевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">2</div>
+									<a href="#" class="workers__name">Антонова Ирина Владимировна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">3</div>
+									<a href="#" class="workers__name">Булкин Виктор Павлович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">4</div>
+									<a href="#" class="workers__name">Васнецова Павел Иванович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat workers__stat_red">
+										<div class="workers__hint hint">
+											<div class="hint__box">
+												<div class="hint__title">Варнава И.В. - отсутствует</div>
+												<div class="hint__description">Сотрудник на больничном с 12.04.2024 по 16.04.2024. Планируемая дата выхода на работу 18.04.2024.</div>
+												<a href="#" class="hint__link">Ссылка если нужна</a>
+											</div>
+										</div><!--/hint-->
+									</div>
+									<div class="workers__num">5</div>
+									<a href="#" class="workers__name">Варнава Инна Вячеславовна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">6</div>
+									<a href="#" class="workers__name">Верный Павел Иванович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">7</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">8</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">9</div>
+									<a href="#" class="workers__name">Даниленко Виктория Ивановна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">10</div>
+									<a href="#" class="workers__name">Дежурная Арина Ильинична</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">11</div>
+									<a href="#" class="workers__name">Дюмина Мария Вячеславовна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">12</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">13</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">14</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">15</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">16</div>
+									<a href="#" class="workers__name">Даниленко Виктория Ивановна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">17</div>
+									<a href="#" class="workers__name">Дежурная Арина Ильинична</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat workers__stat_red">
+										<div class="workers__hint hint">
+											<div class="hint__box">
+												<div class="hint__title">Варнава И.В. - отсутствует</div>
+												<div class="hint__description">Сотрудник на больничном с 12.04.2024 по 16.04.2024. Планируемая дата выхода на работу 18.04.2024.</div>
+												<a href="#" class="hint__link">Ссылка если нужна</a>
+											</div>
+										</div><!--/hint-->
+									</div>
+									<div class="workers__num">18</div>
+									<a href="#" class="workers__name">Дюмина Мария Вячеславовна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">19</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">20</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">21</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">22</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">23</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">24</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">25</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">26</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">27</div>
+									<a href="#" class="workers__name">Григорьян Анна Андреевна</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">28</div>
+									<a href="#" class="workers__name">Гармаш Андрей  Владимирович</a>
+								</div><!--/workers__item-->
+								<div class="workers__item">
+									<div class="workers__stat"></div>
+									<div class="workers__num">29</div>
+									<a href="#" class="workers__name">Дюмина Мария Вячеславовна</a>
+								</div><!--/workers__item-->
+							</div><!--workers-->
+						</div>
+						<div class="section__content section__content_sc">
+							<div class="person">
+								<div class="person__inner">
+									<div class="person__info">
+										<a href="#" class="person__name">Антонова Ирина Владимировна</a>
+										<div class="person__block">
+											<h6 class="person__title title-small">Должность</h6>
+											<div class="person__item">
+												<div class="person__description">Должность</div>
+												<div class="person__text">Советник отдела специальных проектов Управления по работе с обращениями и документационного обеспечения с 10.01.2018г. по 10.01.2024г.</div>
+											</div><!--/person__item-->
+											<div class="person__item">
+												<div class="person__description">Классный чин</div>
+												<div class="person__text">Государственный советник Российской Федерации 1 класса</div>
+											</div><!--/person__item-->
+											<div class="person__item">
+												<div class="person__description">Служебное удостоверение</div>
+												<div class="person__text">745</div>
+											</div><!--/person__item-->
+										</div><!--/person__block-->
+										<div class="person__block">
+											<h6 class="person__title title-small">Телефоны и кабинеты</h6>
+											<div class="person__item">
+												<div class="person__description">Кабинет</div>
+												<div class="person__text">218</div>
+											</div><!--/person__item-->
+											<div class="person__item">
+												<div class="person__description">Гор.телефон</div>
+												<div class="person__text">+7 (495) 453-33-44</div>
+											</div><!--/person__item-->
+											<div class="person__item">
+												<div class="person__description">Дом. телефон</div>
+												<div class="person__text">+7 (495) 886-44-32</div>
+											</div><!--/person__item-->
+										</div><!--/person__block-->
+										<div class="person__block">
+											<h6 class="person__title title-small">Образование</h6>
+											<div class="person__item">
+												<div class="person__description">1 - Высшее образование</div>
+												<div class="person__text">Высшее образование- специалитет<br> 1986г. Московский текстильный институт им. А,Н. Косыгина специальность - машины и аппараты текстильной промышленности.<br> Квалификация - Инженер механик<br> СМЭВ- не проверялось</div>
+											</div><!--/person__item-->
+											<div class="person__item">
+												<div class="person__description">2 - Высшее образование</div>
+												<div class="person__text">Высшее образование- специалитет<br> 1999г., Российская академия государственной службы при Президенте Российской Федерации<br> Специальность - юриспруденция<br> Квалификация - юрист<br> СМЭВ- не проверялось</div>
+											</div><!--/person__item-->
+											<div class="person__item">
+												<div class="person__description">3- Профпереподготовка</div>
+												<div class="person__text">2020г., Московская академия государственного и муниципального управления<br> Специальность - государственное и муниципальное управление. Психология управления.<br> СМЭВ- не проверялось</div>
+											</div><!--/person__item-->
+										</div><!--/person__block-->
+										<div class="person__block">
+											<h6 class="person__title title-small">Адрес</h6>
+											<div class="person__item">
+												<div class="person__description">Домашний адрес</div>
+												<div class="person__text">177098, г.Москва ул. Б. Полярная д.25 кв.77</div>
+											</div><!--/person__item-->
+										</div><!--/person__block-->
+										<div class="person__row">
+											<a href="#" class="person__link">
+												<div class="person__link-icon">
+													<img src="assets/images/usercard-icon.svg" alt="">
+												</div>
+												<span>Перейти в личное дело</span>
+											</a>
+											<a href="#" class="person__link">
+												<div class="person__link-icon">
+													<img src="assets/images/usercard-icon.svg" alt="">
+												</div>
+												<span>Печать</span>
+											</a>
+										</div>
+									</div>
+									<div class="person__photo">
+										<img src="assets/images/foto.png" alt="">
+									</div>
+								</div>
+							</div><!--/person-->
+						</div>
+					</div>
+				</div>
+			</div><!--/section-->
+		</main>
+		<div class="blur"></div>
+	</div>
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

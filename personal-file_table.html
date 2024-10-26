@@ -1,0 +1,3480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>АСД-Кадры</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="printer-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M12 11.3333C12.6212 11.3333 12.9319 11.3333 13.1769 11.2318C13.5036 11.0964 13.7631 10.8368 13.8984 10.5101C13.9999 10.2651 14 9.95472 14 9.33346V6.79794C14 6.05266 14 5.67947 13.8548 5.39453C13.727 5.14365 13.5225 4.93982 13.2716 4.81199C13.0039 4.67558 12.6589 4.66721 12 4.6667M12 4.6667C11.957 4.66667 11.9126 4.66667 11.8668 4.66667H4.13346C4.08759 4.66667 4.04312 4.66667 4 4.6667M12 4.6667L4 4.6667M12 4.6667V4.13127C12 3.386 12 3.0128 11.8548 2.72786C11.727 2.47698 11.5225 2.27316 11.2716 2.14532C10.9864 2 10.6135 2 9.8668 2H6.13346C5.38673 2 5.01308 2 4.72786 2.14532C4.47698 2.27316 4.27316 2.47698 4.14532 2.72786C4 3.01308 4 3.38673 4 4.13346V4.6667M4 4.6667C3.34115 4.66722 2.99556 4.67559 2.72786 4.81199C2.47698 4.93982 2.27316 5.14365 2.14532 5.39453C2 5.67975 2 6.05339 2 6.80013V9.33346C2 9.95472 2 10.2651 2.10149 10.5101C2.23682 10.8368 2.49621 11.0964 2.82292 11.2318C3.06794 11.3333 3.37857 11.3333 3.99983 11.3333M4.66667 7.33333H11.3333M6.00007 9.5H10.0001C10.6213 9.5 10.932 9.5 11.177 9.60149C11.5037 9.73682 11.7632 9.99621 11.8985 10.3229C12 10.5679 12 10.8787 12 11.5C12 12.1213 12 12.4319 11.8985 12.6769C11.7632 13.0036 11.5037 13.2631 11.177 13.3984C10.932 13.4999 10.6213 13.5 10.0001 13.5H6.00007C5.37881 13.5 5.06801 13.4999 4.82299 13.3984C4.49628 13.2631 4.23689 13.0038 4.10156 12.6771C4.00007 12.4321 4.00007 12.1211 4.00007 11.4998C4.00007 10.8786 4.00007 10.5679 4.10156 10.3229C4.23689 9.99621 4.49628 9.73682 4.82299 9.60149C5.06801 9.5 5.37881 9.5 6.00007 9.5Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="calendar-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M5.33329 3.66659H4.80009C4.05335 3.66659 3.67971 3.66659 3.39449 3.81191C3.14361 3.93974 2.93978 4.14357 2.81195 4.39445C2.66663 4.67967 2.66663 5.05331 2.66663 4.80005V5.33325M5.33329 3.66659H10.6666M5.33329 3.66659V2.33325M10.6666 3.66659H11.2001C11.9468 3.66659 12.3197 3.66659 12.6049 3.81191C12.8558 3.93974 13.0603 4.14357 13.1881 4.39445C13.3333 4.67939 13.3333 5.05258 13.3333 4.79786V5.33325M10.6666 3.66659V2.33325M2.66663 5.33325V11.2C2.66663 11.9468 2.66663 12.32 2.81195 12.6052C2.93978 12.8561 3.14361 13.0602 3.39449 13.1881C3.67943 13.3333 4.05262 13.3333 4.7979 13.3333H11.202C11.9473 13.3333 12.32 13.3333 12.6049 13.1881C12.8558 13.0602 13.0603 12.8561 13.1881 12.6052C13.3333 12.3202 13.3333 11.9476 13.3333 11.2023V5.33325M2.66663 5.33325H13.3333M10.6666 10.6666H10.668L10.6679 10.6679L10.6666 10.6679V10.6666ZM7.99996 10.6666H8.00129L8.00126 10.6679L7.99996 10.6679V10.6666ZM5.33329 10.6666H5.33463L5.33459 10.6679L5.33329 10.6679V10.6666ZM10.6679 7.99992V8.00125L10.6666 8.00122V7.99992H10.6679ZM7.99996 7.99992H8.00129L8.00126 8.00125L7.99996 8.00122V7.99992ZM5.33329 7.99992H5.33463L5.33459 8.00125L5.33329 8.00122V7.99992Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="plane-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M6.33333 3.66667V5.67189C6.33333 5.73319 6.30273 5.79045 6.25177 5.82452L2.47814 8.34704C2.17937 8.54676 2 8.88243 2 9.2418C2 9.95625 2.68334 10.4724 3.37056 10.277L6.44444 9.40317C6.55587 9.3715 6.66667 9.45519 6.66667 9.57103V10.9605C6.66667 11.1238 6.66667 11.2054 6.6422 11.2807C6.6341 11.3056 6.62406 11.3299 6.61217 11.3532C6.57622 11.4238 6.5185 11.4815 6.40306 11.5969L5.55338 12.4466C5.48098 12.519 5.44478 12.5552 5.41732 12.5964C5.38108 12.6508 5.35585 12.7117 5.34304 12.7757C5.33333 12.8243 5.33333 12.8755 5.33333 12.9779C5.33333 13.3715 5.33333 13.5683 5.40321 13.6862C5.4954 13.8417 5.66436 13.9353 5.8451 13.9311C5.98212 13.9278 6.149 13.8235 6.48278 13.6149L7.523 12.9648C7.72857 12.8363 7.83135 12.7721 7.94426 12.7594C7.9813 12.7553 8.0187 12.7553 8.05574 12.7594C8.16865 12.7721 8.27143 12.8363 8.477 12.9648L9.51722 13.6149C9.851 13.8235 10.0179 13.9278 10.1549 13.9311C10.3356 13.9353 10.5046 13.8417 10.5968 13.6862C10.6667 13.5683 10.6667 13.3715 10.6667 12.9779C10.6667 12.8755 10.6667 12.8243 10.657 12.7757C10.6442 12.7117 10.6189 12.6508 10.5827 12.5964C10.5552 12.5552 10.519 12.519 10.4466 12.4466L9.59694 11.5969C9.4815 11.4815 9.42378 11.4238 9.38783 11.3532C9.37594 11.3299 9.3659 11.3056 9.35781 11.2807C9.33333 11.2054 9.33333 11.1238 9.33333 10.9605V9.57103C9.33333 9.45519 9.44413 9.3715 9.55556 9.40317L12.6294 10.277C13.3167 10.4724 14 9.95625 14 9.2418C14 8.88243 13.8206 8.54676 13.5219 8.34704L9.74823 5.82452C9.69727 5.79045 9.66667 5.73319 9.66667 5.67189V3.66667C9.66667 2.74619 8.92048 2 8 2C7.07953 2 6.33333 2.74619 6.33333 3.66667Z" stroke-width="1.2" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="flag-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M2.66669 14V10.4581M2.66669 10.4581C6.54548 7.42514 9.46127 13.4908 13.3401 10.4579V2.87565C9.46127 5.90856 6.54548 -0.157402 2.66669 2.87551V10.4581Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="financ-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M13.3337 4.55005L9.43622 8.62504C9.36622 8.69613 9.33083 8.73175 9.2995 8.7598C8.79326 9.21291 8.02775 9.21292 7.5215 8.7598C7.49016 8.73175 7.45451 8.69616 7.38447 8.62503C7.31444 8.55391 7.27941 8.51832 7.24807 8.49027C6.74183 8.03716 5.976 8.03716 5.46976 8.49027C5.43849 8.51826 5.40357 8.55373 5.33387 8.62451L2.66669 11.3334M13.3337 4.55005L13.3334 8.66671M13.3337 4.55005L9.33335 4.66671" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="female-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M8.00002 10.6667C10.3933 10.6667 12.3334 8.72657 12.3334 6.33333C12.3334 3.9401 10.3933 2 8.00002 2C5.60679 2 3.66669 3.9401 3.66669 6.33333C3.66669 8.72657 5.60679 10.6667 8.00002 10.6667ZM8.00002 10.6667V12.6667M8.00002 14V12.6667M8.00002 12.6667H9.33335M8.00002 12.6667H6.66669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="comment-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 8.99175 2.24062 9.92731 2.66667 10.7515L2 14L5.24853 13.34C6.07269 13.7661 7.00825 14 8 14Z" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<rect x="5" y="8" width="0.00666667" height="0.00666667" stroke-width="2" stroke-linejoin="round"/>
+				<rect x="8" y="8" width="0.00666667" height="0.00666667" stroke-width="2" stroke-linejoin="round"/>
+				<rect x="11" y="8" width="0.00666667" height="0.00666667" stroke-width="2" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="document-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M4.66665 14C3.93027 14 3.33331 13.403 3.33331 12.6667V2H9.33331L12.6666 5.33333V12.6667C12.6666 13.403 12.0697 14 11.3333 14H4.66665Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M8.66669 2V6H12.6667" stroke-width="1.2" stroke-linejoin="round"/>
+				<path d="M6 8.66675H11" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M6 11.3333H10" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="cross-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M6 13.3333C6 13.7015 6.29848 14 6.66667 14H9.33333C9.70152 14 10 13.7015 10 13.3333V10L13.23 10C13.5982 10 14 9.70152 14 9.33333V6.66667C14 6.29848 13.5982 6 13.23 6H10L10 2.66667C10 2.29848 9.70152 2 9.33333 2H6.66667C6.29848 2 6 2.29848 6 2.66667V6H2.77C2.40181 6 2 6.29848 2 6.66667V9.33333C2 9.70152 2.40181 10 2.77 10H6V13.3333Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="garant-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M2 12.1667H14M8 7.5V12.1667M12 7.5V12.1667M4 7.5V12.1667M8.44721 2.22361L14.4845 5.24223C14.862 5.43099 14.7277 6 14.3056 6H1.69443C1.27234 6 1.13801 5.43099 1.51554 5.24223L7.55279 2.22361C7.83431 2.08284 8.16569 2.08284 8.44721 2.22361Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="student-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M12.1053 6.01251V9.1045C12.1053 9.78579 12.1053 10.1264 11.9733 10.4199C11.93 10.5163 11.8765 10.6079 11.8139 10.6931C11.6234 10.9523 11.3268 11.1199 10.7337 11.4551L9.33222 12.2471C8.75534 12.5731 8.4669 12.7361 8.1547 12.768C8.05202 12.7785 7.94853 12.7784 7.84588 12.7677C7.53376 12.735 7.24572 12.5713 6.66965 12.2438L5.26057 11.443C4.66986 11.1072 4.3745 10.9393 4.1848 10.6804C4.12244 10.5953 4.06924 10.5039 4.02607 10.4077C3.89474 10.1148 3.89474 9.77507 3.89474 9.09561V6.01251M14 5.09522L9.17182 2.78152C8.66106 2.53675 8.40567 2.41437 8.13467 2.39045C8.04525 2.38256 7.9553 2.38271 7.8659 2.3909C7.59498 2.41573 7.34001 2.53897 6.83006 2.78544L2 5.11997L6.82661 7.43675C7.33803 7.68223 7.59374 7.80498 7.86514 7.82896C7.95469 7.83688 8.04477 7.83673 8.1343 7.82851C8.40561 7.80362 8.66091 7.68002 9.17151 7.43282L14 5.09522ZM14 5.09522V10.823C14 11.4177 14 11.7151 13.8958 11.9799C13.8615 12.0671 13.819 12.151 13.769 12.2304C13.6173 12.4711 13.3776 12.6471 12.8983 12.9991L12.5 13.2916" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="two_users-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M14 13.3332C14 12.1722 12.8869 11.196 11.3333 10.8299M10 13.3333C10 11.8605 8.20914 10.6799 6 10.6799C3.79086 10.6799 2 11.8605 2 13.3333M10 8.65995C11.4728 8.65995 12.6667 7.47272 12.6667 5.99996C12.6667 4.5272 11.4728 3.31995 10 3.31995M6 8.66662C4.52724 8.66662 3.33333 7.47272 3.33333 5.99996C3.33333 4.5272 4.52724 3.33329 6 3.33329C7.47276 3.33329 8.66667 4.5272 8.66667 5.99996C8.66667 7.47272 7.47276 8.66662 6 8.66662Z" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M6.47853 18.9351L18.935 6.47861C20.0842 5.38024 18.6198 3.91583 17.5214 5.06505L5.06498 17.5215C3.91571 18.6198 5.38016 20.0843 6.47853 18.9351Z"/>
+				<path d="M5.06495 6.47866L17.5214 18.9351C18.6198 20.0843 20.0842 18.6199 18.9349 17.5215L6.4785 5.0651C5.38018 3.91583 3.91573 5.38029 5.06495 6.47866Z"/>
+			</g>
+		</symbol>
+		<symbol id="trash-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M4 4.66675V12.6667C4 13.4031 4.59695 14.0001 5.33333 14.0001H10.6667C11.403 14.0001 12 13.4031 12 12.6667V4.66675" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M3 4.66675H13.0001" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M4.66663 4.66662L6 2.19995H10L11.3333 4.66662" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="pen-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M9.78698 3.31505C10.0731 3.02845 10.5373 3.02828 10.8237 3.31466L12.485 4.97594C12.7689 5.25988 12.7718 5.71955 12.4916 6.00711L6.33615 12.3226C6.07275 12.5929 5.71148 12.7452 5.33425 12.7452L3.49946 12.7451C3.27204 12.7451 3.09043 12.5556 3.09999 12.3282L2.50075 12.3029L3.09999 12.3282L3.17875 10.4555C3.19349 10.1049 3.3392 9.7726 3.58703 9.5244L9.78698 3.31505Z" stroke-width="1.2"/>
+				<path d="M10.8989 7.35327L8.35849 4.81283" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9.59537 13.2966H12" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M9.50356 8.51725C9.22523 8.23826 9.22515 7.78666 9.50337 7.50757C9.78263 7.22745 10.2363 7.22731 10.5157 7.50726L14.2949 11.2936C14.6845 11.6839 14.6845 12.3161 14.2949 12.7064L10.5157 16.4927C10.2363 16.7727 9.78263 16.7725 9.50337 16.4924C9.22515 16.2133 9.22523 15.7617 9.50356 15.4828L12.9781 12L9.50356 8.51725Z"/>
+			</g>
+		</symbol>
+		<symbol id="file-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M2 3.99996V11.2C2 11.9467 2 12.3198 2.14532 12.605C2.27316 12.8559 2.47698 13.0603 2.72786 13.1881C3.0128 13.3333 3.386 13.3333 4.13127 13.3333H11.8687C12.614 13.3333 12.9867 13.3333 13.2716 13.1881C13.5225 13.0603 13.727 12.856 13.8548 12.6051C14.0001 12.3199 14.0001 11.9466 14.0001 11.1998L14.0001 6.13314C14.0001 5.38641 14.0001 5.01304 13.8548 4.72782C13.727 4.47694 13.5226 4.27312 13.2717 4.14528C12.9865 3.99996 12.6134 3.99996 11.8667 3.99996H9M2 3.99996H9M2 3.99996C2 3.26358 2.59695 2.66663 3.33333 2.66663H6.78301C7.10913 2.66663 7.27258 2.66663 7.42603 2.70347C7.56207 2.73613 7.6919 2.79014 7.8112 2.86324C7.94571 2.94567 8.06121 3.06117 8.29167 3.29163L9 3.99996" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="user-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M12 12.6667C12 11.1939 10.2091 10 8 10C5.79086 10 4 11.1939 4 12.6667M8 8.00002C6.52724 8.00002 5.33333 6.80611 5.33333 5.33335C5.33333 3.86059 6.52724 2.66669 8 2.66669C9.47276 2.66669 10.6667 3.86059 10.6667 5.33335C10.6667 6.80611 9.47276 8.00002 8 8.00002Z" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="plan-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M4.83913 4.42271V8.11356M4.83913 4.42271C5.4977 4.42271 6.03156 3.88037 6.03156 3.21136C6.03156 2.54234 5.4977 2 4.83913 2C4.18057 2 3.64671 2.54234 3.64671 3.21136C3.64671 3.88037 4.18057 4.42271 4.83913 4.42271ZM9.0221 12.7886H5.63409C5.19505 12.7886 4.83913 12.4327 4.83913 11.9937V8.11356M9.0221 12.7886C9.0221 13.4577 9.55597 14 10.2145 14C10.8731 14 11.407 13.4577 11.407 12.7886C11.407 12.1196 10.8731 11.5773 10.2145 11.5773C9.55597 11.5773 9.0221 12.1196 9.0221 12.7886ZM4.83913 8.11356H9.0221M9.0221 8.11356C9.0221 8.78258 9.55597 9.32492 10.2145 9.32492C10.8731 9.32492 11.407 8.78258 11.407 8.11356C11.407 7.44455 10.8731 6.90221 10.2145 6.90221C9.55597 6.90221 9.0221 7.44455 9.0221 8.11356Z" stroke-width="1.2"/>
+			</g>
+		</symbol>
+		<symbol id="users-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M10.5833 13.3333V14.0833H12.0833V13.3333H10.5833ZM3.91667 13.3333V14.0833H5.41667V13.3333H3.91667ZM13.25 11.3336V12.0836H14.75V11.3336H13.25ZM12.1902 8.77449C11.7895 8.66946 11.3796 8.90912 11.2745 9.30979C11.1695 9.71047 11.4091 10.1204 11.8098 10.2255L12.1902 8.77449ZM1.25 11.3336V12.0836H2.75V11.3336H1.25ZM4.19019 10.2255C4.59086 10.1204 4.83052 9.71047 4.72549 9.30979C4.62045 8.90912 4.21049 8.66946 3.80981 8.77449L4.19019 10.2255ZM11.4998 6.2652C11.1912 6.54144 11.1649 7.01559 11.4411 7.32424C11.7174 7.63288 12.1915 7.65915 12.5002 7.3829L11.4998 6.2652ZM8.83315 3.28372C8.5245 3.55997 8.49824 4.03412 8.77448 4.34276C9.05073 4.65141 9.52487 4.67767 9.83352 4.40143L8.83315 3.28372ZM3.49981 7.3829C3.80846 7.65915 4.28261 7.63288 4.55885 7.32424C4.8351 7.01559 4.80883 6.54144 4.50019 6.2652L3.49981 7.3829ZM6.16648 4.40143C6.47513 4.67767 6.94927 4.65141 7.22552 4.34276C7.50176 4.03412 7.4755 3.55997 7.16685 3.28372L6.16648 4.40143ZM12.0833 13.3333C12.0833 12.4141 11.4663 11.71 10.7429 11.276C10.0046 10.833 9.03303 10.5833 8 10.5833V12.0833C8.80791 12.0833 9.50303 12.2813 9.97115 12.5622C10.4542 12.852 10.5833 13.148 10.5833 13.3333H12.0833ZM8 10.5833C6.96697 10.5833 5.99541 10.833 5.25711 11.276C4.53373 11.71 3.91667 12.4141 3.91667 13.3333H5.41667C5.41667 13.148 5.5458 12.852 6.02885 12.5622C6.49697 12.2813 7.19209 12.0833 8 12.0833V10.5833ZM14.75 11.3336C14.75 10.6545 14.4067 10.0843 13.943 9.66729C13.4813 9.25211 12.8654 8.95151 12.1902 8.77449L11.8098 10.2255C12.3118 10.3571 12.696 10.5632 12.94 10.7826C13.1819 11.0002 13.25 11.1925 13.25 11.3336H14.75ZM2.75 11.3336C2.75 11.1925 2.81806 11.0002 3.06002 10.7826C3.30403 10.5632 3.68816 10.3571 4.19019 10.2255L3.80981 8.77449C3.13457 8.95151 2.5187 9.25211 2.05702 9.66729C1.5933 10.0843 1.25 10.6545 1.25 11.3336H2.75ZM8 8.58331C7.30964 8.58331 6.75 8.02367 6.75 7.33331H5.25C5.25 8.8521 6.48122 10.0833 8 10.0833V8.58331ZM6.75 7.33331C6.75 6.64296 7.30964 6.08331 8 6.08331V4.58331C6.48122 4.58331 5.25 5.81453 5.25 7.33331H6.75ZM8 6.08331C8.69036 6.08331 9.25 6.64296 9.25 7.33331H10.75C10.75 5.81453 9.51878 4.58331 8 4.58331V6.08331ZM9.25 7.33331C9.25 8.02367 8.69036 8.58331 8 8.58331V10.0833C9.51878 10.0833 10.75 8.8521 10.75 7.33331H9.25ZM12.5002 7.3829C13.0616 6.88043 13.4167 6.14784 13.4167 5.33331H11.9167C11.9167 5.70345 11.7567 6.03524 11.4998 6.2652L12.5002 7.3829ZM13.4167 5.33331C13.4167 3.81453 12.1855 2.58331 10.6667 2.58331V4.08331C11.357 4.08331 11.9167 4.64296 11.9167 5.33331H13.4167ZM10.6667 2.58331C9.96282 2.58331 9.31918 2.84872 8.83315 3.28372L9.83352 4.40143C10.0552 4.20305 10.346 4.08331 10.6667 4.08331V2.58331ZM4.50019 6.2652C4.24326 6.03524 4.08333 5.70345 4.08333 5.33331H2.58333C2.58333 6.14784 2.93841 6.88043 3.49981 7.3829L4.50019 6.2652ZM4.08333 5.33331C4.08333 4.64296 4.64298 4.08331 5.33333 4.08331V2.58331C3.81455 2.58331 2.58333 3.81453 2.58333 5.33331H4.08333ZM5.33333 4.08331C5.65396 4.08331 5.94484 4.20305 6.16648 4.40143L7.16685 3.28372C6.68082 2.84872 6.03718 2.58331 5.33333 2.58331V4.08331Z"/>
+			</g>
+		</symbol>
+		<symbol id="exit-icon" viewBox="0 0 16 16">
+			<g clip-path="url(#clip0_17_683)">
+				<path d="M10 2.66666H4.33333C3.78105 2.66666 3.33333 3.11437 3.33333 3.66666V12.3333C3.33333 12.8856 3.78105 13.3333 4.33333 13.3333H10" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M10.6667 10L12.6667 8M12.6667 8L10.6667 6M12.6667 8H6"  stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="search-icon" viewBox="0 0 16 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.46 7.00001C11.46 9.46409 9.46959 11.45 6.99992 11.45C4.53418 11.45 2.554 9.46801 2.554 7.00001C2.554 4.52924 4.53694 2.54003 6.99992 2.54003C9.46682 2.54003 11.46 4.53316 11.46 7.00001ZM10.5535 11.4021C9.58253 12.1833 8.3467 12.65 6.99992 12.65C3.87031 12.65 1.354 10.1296 1.354 7.00001C1.354 3.87039 3.87031 1.34003 6.99992 1.34003C10.1295 1.34003 12.66 3.87039 12.66 7.00001C12.66 8.34936 12.1896 9.58546 11.4036 10.5551L13.4243 12.5757C13.6587 12.81 13.6587 13.1899 13.4244 13.4242C13.1901 13.6586 12.8102 13.6586 12.5758 13.4243L10.5535 11.4021Z"/>
+			</g>
+		</symbol>
+		<symbol id="plus-icon" viewBox="0 0 16 16">
+			<g>
+				<path d="M11.7715 8H8.00025M8.00025 8H4.229M8.00025 8V4.22875M8.00025 8V11.7712" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__col">
+						<div class="header__burger burger">
+							<span class="burger__item"></span>
+						</div>
+						<h1 class="header__logo logo">
+							<a href="/" class="">
+								<span>АСД</span>-Кадры
+							</a>
+						</h1>
+					</div>
+					<div class="header__row">
+						<nav class="header__nav">
+							<a href="#" class="header__item active">
+								<svg>
+									<use xlink:href="#user-icon"></use>
+								</svg>
+								<span>Список сотрудников</span>
+							</a>
+							<a href="#" class="header__item">
+								<svg>
+									<use xlink:href="#plan-icon"></use>
+								</svg>
+								<span>Штатное расписание</span>
+							</a>
+							<a href="#" class="header__item header__item_f">
+								<svg>
+									<use xlink:href="#users-icon"></use>
+								</svg>
+								<span>Уведомления по разделам</span>
+							</a>
+						</nav>
+						<div class="header__account account">
+							<div class="account__icon">
+								<span>АС</span>
+							</div>
+							<div class="account__arrow">
+								<img src="assets/images/arrow-icon.svg" alt="">
+							</div>
+							<div class="account__dropdown">
+								<a href="#" class="account__dropdown-item">
+									<svg>
+										<use xlink:href="#exit-icon"></use>
+									</svg>
+									<span>Выйти</span>
+								</a>
+								<a href="#" class="account__dropdown-item">
+									<svg>
+										<use xlink:href="#exit-icon"></use>
+									</svg>
+									<span>Пункт 2</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header__menu menu">
+						<nav class="header__nav">
+							<a href="#" class="header__item active">
+								<svg>
+									<use xlink:href="#user-icon"></use>
+								</svg>
+								<span>Список сотрудников</span>
+							</a>
+							<a href="#" class="header__item">
+								<svg>
+									<use xlink:href="#plan-icon"></use>
+								</svg>
+								<span>Штатное расписание</span>
+							</a>
+							<a href="#" class="header__item header__item_f">
+								<svg>
+									<use xlink:href="#users-icon"></use>
+								</svg>
+								<span>Уведомления по разделам</span>
+							</a>
+						</nav>
+						<div class="menu__list">
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Организационная структура</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Отпуска</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Пенсия</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Аттестации</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Классные чины гражданской службы</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Награды и поощрения</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Справки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стат. отчеты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Руководители ИКСРФ</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Воинский учет (офицеры)</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Сотрудники</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Отпуска</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Пенсия</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Аттестации</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Классные чины гражданской службы</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Награды и поощрения</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Справки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стат. отчеты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Руководители ИКСРФ</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Воинский учет (офицеры)</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Отчеты</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Отпуска</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Пенсия</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стаж, надбавки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Аттестации</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Классные чины гражданской службы</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Награды и поощрения</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Справки</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (работники Аппарата)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Журнал регистрации уведомлений об иной оплачиваемой работе</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Категории лиц, которыми установлены социальные гарантии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Повышенные за период</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Временно нетрудоспособные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Перечень лиц и виды социальных гарантий</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Уволенные</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Впервые поступившие на госслыжбу</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые/переведенные из КР</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Адреса, телефоны (члены ЦИК РФ, руководство)</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Стат. отчеты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Руководители ИКСРФ</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Воинский учет (офицеры)</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<div class="menu__item">
+								<div class="menu__item-title submenu-open">
+									<span>Сервис</span>
+									<img src="assets/images/arrow-icon.svg" alt="">
+								</div>
+								<div class="menu__sub">
+									<div class="menu__list">
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<div class="menu__item">
+											<div class="menu__item-title subsubmenu-open">
+												<span>Структура и штаты</span>
+												<img src="assets/images/arrow-icon.svg" alt="">
+											</div>
+											<div class="menu__subsub">
+												<div class="menu__list">
+													<a href="#" class="menu__item">
+														<span>Сводка для Секретаря Комиссии</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Табель подразделения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения (html)</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Дни рождения по управлениям</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Принятые</span>
+													</a>
+													<a href="#" class="menu__item">
+														<span>Переназначенные</span>
+													</a>
+												</div>
+											</div><!--/menu__subsub-->
+										</div>
+										<a href="#" class="menu__item">
+											<span>Воинский учет (солдаты)</span>
+										</a>
+									</div>
+								</div><!--/menu__sub-->
+							</div><!--/menu__item-->
+							<a href="#" class="menu__item">
+								<span>Помощь</span>
+							</a><!--/menu__item-->
+						</div>
+					</div><!--/menu-->
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<div class="section section_page">
+				<div class="container">
+					<div class="section__inner">
+						<div class="section__sidebar">
+							<div class="sidemenu">
+								<div class="sidemenu__item">
+									<div class="sidemenu__title sidemenu__title_drop">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#file-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Общие</div>
+									</div>
+									<div class="sidemenu__dropdown">
+										<ul>
+											<li>
+												<a href="#" class="sidemenu__link">Стаж</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Пенсии</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Трудовая деятельность</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Должностные инструкции</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Аттестации</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Тесты</a>
+											</li>
+										</ul>
+									</div>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<div class="sidemenu__title sidemenu__title_drop">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#two_users-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Семья</div>
+									</div>
+									<div class="sidemenu__dropdown">
+										<ul>
+											<li>
+												<a href="#" class="sidemenu__link">Стаж</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Пенсии</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Трудовая деятельность</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Должностные инструкции</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Аттестации</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Тесты</a>
+											</li>
+										</ul>
+									</div>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<div class="sidemenu__title sidemenu__title_drop">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#student-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Образование</div>
+									</div>
+									<div class="sidemenu__dropdown">
+										<ul>
+											<li>
+												<a href="#" class="sidemenu__link">Стаж</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Пенсии</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Трудовая деятельность</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Должностные инструкции</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Аттестации</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Тесты</a>
+											</li>
+										</ul>
+									</div>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<div class="sidemenu__title sidemenu__title_drop">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#plane-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Отсутствие</div>
+									</div>
+									<div class="sidemenu__dropdown">
+										<ul>
+											<li>
+												<a href="#" class="sidemenu__link">Отпуска</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Болезни</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Другое</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Командировки</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Донорство</a>
+											</li>
+										</ul>
+									</div>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<div class="sidemenu__title sidemenu__title_drop">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#flag-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Работа</div>
+									</div>
+									<div class="sidemenu__dropdown">
+										<ul>
+											<li>
+												<a href="#" class="sidemenu__link">Стаж</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Пенсии</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Трудовая деятельность</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Должностные инструкции</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Аттестации</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Тесты</a>
+											</li>
+										</ul>
+									</div>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<div class="sidemenu__title sidemenu__title_drop">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#financ-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Надбавки</div>
+									</div>
+									<div class="sidemenu__dropdown">
+										<ul>
+											<li>
+												<a href="#" class="sidemenu__link">Стаж</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Пенсии</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Трудовая деятельность</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Должностные инструкции</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Аттестации</a>
+											</li>
+											<li>
+												<a href="#" class="sidemenu__link">Тесты</a>
+											</li>
+										</ul>
+									</div>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<a href="#" class="sidemenu__title">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#female-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Воинский учет</div>
+									</a>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<a href="#" class="sidemenu__title">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#comment-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Сообщение в райвренкомат</div>
+									</a>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<a href="#" class="sidemenu__title">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#document-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Сведения о подаче<br> декларации</div>
+									</a>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<a href="#" class="sidemenu__title">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#document-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Сведения о доходах</div>
+									</a>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<a href="#" class="sidemenu__title">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#cross-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Диспансеризация</div>
+									</a>
+								</div><!--/sidemenu__item-->
+								<div class="sidemenu__item">
+									<a href="#" class="sidemenu__title">
+										<div class="sidemenu__icon">
+											<svg>
+												<use xlink:href="#garant-icon"></use>
+											</svg>
+										</div>
+										<div class="sidemenu__name">Соц.гарантии</div>
+									</a>
+								</div><!--/sidemenu__item-->
+							</div><!--/sidemenu-->
+							<a href="#" class="btn-hide">
+								<svg>
+									<use xlink:href="#arrow-icon"></use>
+								</svg>
+								<span>Скрыть меню</span>
+							</a>
+						</div>
+						<div class="section__content">
+							<h2 class="title mb-16">Константинов Константин Константинович</h2>
+							<div class="person person_page">
+								<div class="person__table table table_check">
+									<div class="table__inner">
+										<div class="table__header">
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Дата</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Текст</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Текст</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Организация</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Подразделение</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Должность</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Причина</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Льготы</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Вид</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Номер</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Дата</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Номер</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Дата</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__title">Период</div>
+												</div><!--/table__col-->
+											</div>
+										</div>
+										<div class="table__content">
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">ООО “Комсомольская правда- Воронеж”</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+											<div class="table__row">
+												<div class="table__col">
+													<div class="table__checkbox"></div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Нет</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Центральная избирательная комиссия Российской Федерации</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">-</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">По собственному желанию</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">1</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">Прием на работу</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">139/к</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">14.04.2024</div>
+												</div><!--/table__col-->
+												<div class="table__col">
+													<div class="table__info">0л. 1м. 29дн.</div>
+												</div><!--/table__col-->
+											</div><!--/table__row-->
+										</div>
+									</div>
+								</div><!--/table-->
+								<div class="buttons-table buttons-table_all">
+									<div class="buttons-table__inner">
+										<div class="buttons-table__col">
+											<a href="#" class="btn open-popup" data-popup="popup-edit">
+												<svg>
+													<use xlink:href="#plus-icon"></use>
+												</svg>
+												<span>Добавить</span>
+											</a>
+											<a href="#" class="btn">
+												<svg>
+													<use xlink:href="#printer-icon"></use>
+												</svg>
+												<span>Печать</span>
+											</a>
+											<a href="#" class="btn">
+												<svg>
+													<use xlink:href="#calendar-icon"></use>
+												</svg>
+												<span>Сл.год стандарт</span>
+											</a>
+										</div>
+										<a href="#" class="btn-transparent open-popup" data-popup="popup-delete">
+											<svg>
+												<use xlink:href="#trash-icon"></use>
+											</svg>
+											<span>Удалить</span>
+										</a>
+									</div>
+								</div>
+								<div class="buttons-table buttons-table_string">
+									<div class="buttons-table__inner">
+										<div class="buttons-table__col">
+											<a href="#" class="btn open-popup" data-popup="popup-edit">
+												<svg>
+													<use xlink:href="#pen-icon"></use>
+												</svg>
+												<span>Редактировать</span>
+											</a>
+											<a href="#" class="btn">
+												<svg>
+													<use xlink:href="#printer-icon"></use>
+												</svg>
+												<span>Печать</span>
+											</a>
+										</div>
+										<a href="#" class="btn-transparent open-popup" data-popup="popup-delete">
+											<svg>
+												<use xlink:href="#trash-icon"></use>
+											</svg>
+										<span>Удалить</span>
+									</a>
+									</div>
+								</div>
+							</div><!--/person-->
+						</div>
+					</div>
+				</div>
+			</div><!--/section-->
+		</main>
+		<div class="blur"></div>
+	</div>
+
+	<div class="popup popup-edit">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<div class="popup__content">
+					<div class="popup__header">
+						<h3 class="title-small">Трудовая деятельность</h3>
+						<span class="popup__close">
+							<svg>
+								<use xlink:href="#close-icon"></use>
+							</svg>
+						</span>
+					</div>
+					<form action="#" class="form">
+						<div class="form__block">
+							<div class="form__inner">
+								<div class="form__item">
+									<div class="form__description">Дата поступления (№ записи в ТК )</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input form__input_calendar">
+										<input type="text" placeholder="--.--.----" value="09.01.2023">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Действия</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Перевод на другую должность</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option selected">
+													<span>Перевод на другую должность</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Перевод на другую должность 2</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Перевод на другую должность 3</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Перевод на другую должность 4</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+							</div>
+						</div><!--/form__block-->
+						<div class="form__block">
+							<div class="form__inner">
+								<div class="form__item form__item_full">
+									<div class="form__description">Наименование организации</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Центральная избирательная комиссия Российской Федерации</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option selected">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Наименование подразделения</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Управление информации и международного сотрудничества</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option selected">
+													<span>Управление информации и международного сотрудничества</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Наименование отдела</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Отдел пресс-службы</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option">
+													<span>Управление информации и международного сотрудничества</span>
+												</div>
+												<div class="selectcheckbox__option selected">
+													<span>Отдел пресс-службы</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Центральная избирательная комиссия Российской Федерации</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Наименование должости</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="Ведущий консультант">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Место работы</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>г.Москва</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option">
+													<span>г.Москва</span>
+												</div>
+												<div class="selectcheckbox__option selected">
+													<span>г.Москва</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>г.Москва</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>г.Москва</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Причина увольнения</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Выбрать</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option selected">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Признак гос.службы для выслуги лет</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Выбрать</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option">
+													<span>Признак гос.службы</span>
+												</div>
+												<div class="selectcheckbox__option selected">
+													<span>Признак гос.службы</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Признак гос.службы</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Признак гос.службы </span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Причина увольнения</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Выбрать</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option selected">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_br">
+									<div class="form__description">Льготный коэффициент</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="1">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Дата увольнения (№ записи в ТК )</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input form__input_calendar">
+										<input type="text" placeholder="--.--.----" value="09.01.2023">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Действия</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="selectcheckbox">
+										<div class="selectcheckbox__select">
+											<span>Перевод на другую должность</span>
+										</div>
+										<div class="selectcheckbox__dropdown">
+											<div class="selectcheckbox__description">Выбрать</div>
+											<div class="selectcheckbox__inner">
+												<div class="selectcheckbox__option">
+													<span>Перевод на другую должность</span>
+												</div>
+												<div class="selectcheckbox__option selected">
+													<span>Перевод на другую должность</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+												<div class="selectcheckbox__option">
+													<span>Причина увольнения</span>
+												</div>
+											</div>
+										</div>
+									</div><!--/selectcheckbox-->
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Длина периода</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="1г. 4мес. 2д.">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="checkbox">
+										<input checked type="checkbox" id="period_1">
+										<label for="period_1">
+											<span></span>
+											<span>Учитывать длину периода при расчете непрер.стажа</span>
+										</label>
+									</div><!--/checkbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="checkbox">
+										<input checked type="checkbox" id="period_2">
+										<label for="period_2">
+											<span></span>
+											<span>Не учитывать длину периода при расчете общего стажа</span>
+										</label>
+									</div><!--/checkbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="checkbox">
+										<input checked type="checkbox" id="period_3">
+										<label for="period_3">
+											<span></span>
+											<span>Не учитывать длину периода при расчете страхового стажа</span>
+										</label>
+									</div><!--/checkbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="checkbox">
+										<input checked type="checkbox" id="period_4">
+										<label for="period_4">
+											<span></span>
+											<span>Нестраховой период страхового стаж</span>
+										</label>
+									</div><!--/checkbox-->
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="checkbox">
+										<input checked type="checkbox" id="period_5">
+										<label for="period_5">
+											<span></span>
+											<span>Прикомандированный</span>
+										</label>
+									</div><!--/checkbox-->
+								</div><!--/form__item-->
+								<div class="form__buttons form__buttons_wrap">
+									<a href="#" class="btn-transparent">Избрание членом ЦИК</a>
+									<a href="#" class="btn-transparent">Избрание членом ЦИК</a>
+								</div>
+							</div>
+						</div><!--/form__block-->
+						<div class="form__block">
+							<div class="form__inner">
+								<div class="form__item form__item_br">
+									<div class="form__description">Номер</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="38-ЛС">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Дата расп. о начале периода</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input form__input_calendar">
+										<input type="text" placeholder="--.--.----">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Исп.срок по</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input form__input_calendar">
+										<input type="text" placeholder="--.--.----">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Номер</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="487-ЛС">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">На дату</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input form__input_calendar">
+										<input type="text" placeholder="--.--.----">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Примечание</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<textarea>Текст начальника отдела Контрольного Управления Центральной Текст комиссии Российской Федерации</textarea>
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">За штатом с </div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input form__input_calendar">
+										<input type="text" placeholder="--.--.----">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item">
+									<div class="form__description">Врем. из</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="текст">
+									</div>
+								</div><!--/form__item-->
+								<div class="form__item form__item_full">
+									<div class="form__description">Времено замещает отсуствующего (ФИО)</div>
+									<div class="form__error">Ошибка - текст ошибки</div>
+									<div class="form__input">
+										<input type="text" value="Константин Константинович Яковлев">
+									</div>
+								</div><!--/form__item-->
+							</div>
+						</div><!--/form__block-->
+						<div class="form__buttons">
+							<button type="reset" class="btn-transparent close-popup">Отмена</button>
+							<button type="submit" class="btn">Сохранить</button>
+						</div>
+					</form>
+				</div>
+    	    </div>
+		</div>
+	</div><!--/popup-edit-->
+
+	<div class="popup popup-delete">
+		<div class="closex"></div>
+		<div class="popup__inner">
+			<div class="popup__box">
+				<div class="popup__content">
+					<div class="popup__header popup__header_right">
+						<span class="popup__close">
+							<svg>
+								<use xlink:href="#close-icon"></use>
+							</svg>
+						</span>
+					</div>
+					<div class="delete">
+						<div class="delete__icon">
+							<img src="assets/images/warning.svg" alt="">
+						</div>
+						<h5 class="title">Вы уверены что хотите удалить запись?</h5>
+						<div class="delete__text">Текст описания если нужно для ошибки или сообщения</div>
+						<a href="#" class="link">ссылка если нужно</a>
+						<div class="delete__buttons">
+							<button type="reset" class="btn-transparent close-popup">Отмена</button>
+							<button type="submit" class="btn">Сохранить</button>
+						</div> 
+					</div><!--/delete-->
+				</div>
+    	    </div>
+		</div>
+	</div><!--/popup-delete-->
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
